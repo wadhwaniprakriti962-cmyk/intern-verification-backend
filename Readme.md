@@ -1,154 +1,83 @@
+# Intern Verification System – Backend
+
+Backend API service for the Intern Verification System.  
+This application provides secure authentication, intern data management, and verification APIs for HR operations.
 
 ---
 
-# Backend README
-
-Use this in backend repo `README.md`
-
-```md id="backend"
-# Intern Verification System - Backend
-
-Backend API for the Intern Verification System.
-
 ## 🚀 Live API
-Backend URL:  
+
+Backend Deployment:  
+https://intern-verification-backend.vercel.app
+
 ---
 
-# Backend README
+## 📌 Project Overview
 
-Use this in backend repo `README.md`
+The backend is built using Node.js, Express.js, and MongoDB Atlas.  
+It handles:
 
-```md id="backend"
-# Intern Verification System - Backend
+- HR Authentication
+- JWT Authorization
+- Intern Record Management
+- Verification APIs
+- Secure Password Hashing
+- Database Connectivity
 
-Backend API for the Intern Verification System.
-
-## 🚀 Live API
-Backend URL: 
 ---
 
-# Backend README
+## ✨ Features
 
-Use this in backend repo `README.md`
-
-```md id="backend"
-# Intern Verification System - Backend
-
-Backend API for the Intern Verification System.
-
-## 🚀 Live API
-Backend URL: https://intern-verification-backend.vercel.app
-
-## 📌 Features
-
-- HR Authentication
-- JWT Authorization
-- Intern Data APIs
-- MongoDB Integration
-- Secure Password Hashing
+- Secure HR Registration & Login
+- JWT-based Authentication
 - Protected Routes
+- MongoDB Atlas Integration
+- RESTful APIs
+- Password Encryption using bcryptjs
+- CORS Configuration
+- Environment Variable Protection
+- Deployment on Vercel
 
-## 🛠 Tech Stack
+---
 
-- Node.js
-- Express.js
-- MongoDB Atlas
-- Mongoose
-- JWT
-- bcryptjs
-- CORS
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Node.js | Runtime Environment |
+| Express.js | Backend Framework |
+| MongoDB Atlas | Cloud Database |
+| Mongoose | MongoDB ODM |
+| JWT | Authentication |
+| bcryptjs | Password Hashing |
+| CORS | Cross-Origin Requests |
+| dotenv | Environment Variables |
+
+---
 
 ## 📂 Folder Structure
 
+```txt
 server/
-├── controllers/
-├── models/
-├── routes/
-├── middleware/
+│
 ├── config/
-└── server.js
-
-## ⚙️ Environment Variables
-
-Create a `.env` file:
-
-```env
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-CLIENT_URL=https://your-frontend-url.vercel.app
-
-## 📌 Features
-
-- HR Authentication
-- JWT Authorization
-- Intern Data APIs
-- MongoDB Integration
-- Secure Password Hashing
-- Protected Routes
-
-## 🛠 Tech Stack
-
-- Node.js
-- Express.js
-- MongoDB Atlas
-- Mongoose
-- JWT
-- bcryptjs
-- CORS
-
-## 📂 Folder Structure
-
-server/
+│   └── db.js
+│
 ├── controllers/
-├── models/
-├── routes/
+│   ├── authControllers.js
+│   └── internControllers.js
+│
 ├── middleware/
-├── config/
-└── server.js
-
-## ⚙️ Environment Variables
-
-Create a `.env` file:
-
-```env
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-CLIENT_URL=https://your-frontend-url.vercel.app
-
-## 📌 Features
-
-- HR Authentication
-- JWT Authorization
-- Intern Data APIs
-- MongoDB Integration
-- Secure Password Hashing
-- Protected Routes
-
-## 🛠 Tech Stack
-
-- Node.js
-- Express.js
-- MongoDB Atlas
-- Mongoose
-- JWT
-- bcryptjs
-- CORS
-
-## 📂 Folder Structure
-
-server/
-├── controllers/
+│   └── authMiddleware.js
+│
 ├── models/
+│   ├── User.js
+│   └── Intern.js
+│
 ├── routes/
-├── middleware/
-├── config/
+│   ├── authRoutes.js
+│   └── internRoutes.js
+│
+├── .env
+├── package.json
 └── server.js
-
-## ⚙️ Environment Variables
-
-Create a `.env` file:
-
-```env
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-CLIENT_URL=https://your-frontend-url.vercel.app
