@@ -12,6 +12,10 @@ const PORT = process.env.PORT || 5000;
 // middleware
 app.use(express.json());
 
+<<<<<<< HEAD
+=======
+// IMPORTANT: production CORS setup
+>>>>>>> 855feed (fix bcryptjs installation)
 app.use(
   cors({
     origin: process.env.CLIENT_URL,
@@ -39,4 +43,8 @@ if (require.main === module) {
   });
 }
 
+<<<<<<< HEAD
 module.exports = app;
+=======
+module.exports = app;
+>>>>>>> 855feed (fix bcryptjs installation)
