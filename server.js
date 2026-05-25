@@ -28,13 +28,15 @@ app.get("/", (req, res) => {
   res.send("Internship Verification System API is running");
 });
 
-// start server AFTER DB connects
-connectDB()
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
-    });
-  })
-  .catch((err) => {
-    console.log("DB Connection Error:", err);
+connectDB().then(() => {
+  console.log("MongoDB Connected");
+});
+
+// ONLY RUN LOCALLY
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
   });
+}
+
+module.exports = app;
